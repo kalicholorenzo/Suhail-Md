@@ -1,27 +1,71 @@
-*QR HAS BEEN SCANNED SUCCESSFULY* ✅
+name: name: Node.js CI
 
-*Gɪᴠᴇ ᴀ ꜱᴛᴀʀ ᴛᴏ ʀᴇᴘᴏ ꜰᴏʀ ᴄᴏᴜʀᴀɢᴇ* 🌟
-https://github.com/SuhailTechInfo/Suhail-Md
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  build:
 
-*Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ꜰᴏʀ ϙᴜᴇʀʏ* 💭
-https://t.me/suhail_md0
-https://whatsapp.com/channel/0029VadHtwWFCCoaogdKsh0B
+    runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [20.x]
 
-*Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ* 🪄 
-https://youtube.com/SuhailTechInfo
+    steps:
+    - name: Checkout Suhail-Md repository
+      uses: actions/checkout@v3
 
-*SUHAIL-MD--WHATTSAPP-BOT* 🥀*QR HAS BEEN SCANNED SUCCESSFULY* ✅
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-*Gɪᴠᴇ ᴀ ꜱᴛᴀʀ ᴛᴏ ʀᴇᴘᴏ ꜰᴏʀ ᴄᴏᴜʀᴀɢᴇ* 🌟
-https://github.com/SuhailTechInfo/Suhail-Md
+    - name: Install libraries
+      run: npm install
 
-*Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ꜰᴏʀ ϙᴜᴇʀʏ* 💭
-https://t.me/suhail_md0
-https://whatsapp.com/channel/0029VadHtwWFCCoaogdKsh0B
+    - name: Start Suhail-Md
+    
+      env:
+          OWNER_NAME: 
+          OWNER_NUMBER:
+          SESSION_ID:
 
+      run: npm startNode.js CI
 
-*Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ* 🪄 
-https://youtube.com/SuhailTechInfo
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  build:
 
-*SUHAIL-MD--WHATTSAPP-BOT* 🥀
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout Suhail-Md repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install libraries
+      run: npm install
+
+    - name: Start Suhail-Md
+    
+      env:
+          OWNER_NAME: 
+          OWNER_NUMBER:
+          SESSION_ID:
+
+      run: npm start
